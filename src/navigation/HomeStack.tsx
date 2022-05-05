@@ -22,19 +22,21 @@ export type RootStackParamsList = {
 const Stack = createNativeStackNavigator<RootStackParamsList>();
 
 const HomeStack: React.FC = () => {
+
     return (
         <NavigationContainer>
-            <Stack.Navigator initialRouteName='IntroScreen'>
+            <Stack.Navigator initialRouteName="IntroScreen">
 
                 <Stack.Screen
                     name="IntroScreen"
                     component={IntroScreen}
+                    options={{title: " "}}
                 />
 
                 <Stack.Screen
                     name="Home"
                     component={Home}
-                    options={{title: "Singapore"}}
+                    options={{title: "SG Hawker Food Reviews"}}
                 />
        
                 <Stack.Screen

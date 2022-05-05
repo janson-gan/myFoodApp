@@ -17,7 +17,6 @@ const LoginScreen: React.FC<Props> = ({ navigation, route }) => {
 
     // const [username, setUsername] = useState("");
     // const [password, setPassword] = useState("");
-    const [homepage, setHomepage] = useState(false);
     const [showPassword, setShowPassword] = useState(true);
 
     // const handleSubmit = () => {
@@ -33,13 +32,7 @@ const LoginScreen: React.FC<Props> = ({ navigation, route }) => {
     // }
 
     return (
-      <>
-
-      {homepage
-      ?  (<View>
-            <Home navigation={navigation} route={route}/>
-        </View>)
-        : ( <View style={styles.container}>
+        <View style={styles.container}>
             <Text style={styles.heading}>Log In</Text>
             <Image
                 style={styles.image} 
@@ -99,13 +92,6 @@ const LoginScreen: React.FC<Props> = ({ navigation, route }) => {
 
         </View>)
 }
-    
-       
-
-        </>
-
-    );
-};
 
 const styles = StyleSheet.create({
     container: {

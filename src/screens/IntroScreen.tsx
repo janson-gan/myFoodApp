@@ -4,6 +4,7 @@ import { RootStackParamsList } from '../navigation/HomeStack';
 import { StyleSheet,Text,View, Image } from 'react-native';
 import AppIntroSlider from 'react-native-app-intro-slider';
 import LoginScreen from './LoginScreen';
+import { useNavigation } from '@react-navigation/native';
 
 type Props = NativeStackScreenProps<RootStackParamsList>
 

@@ -34,7 +34,10 @@ const Home: React.FC<Props> = ({ navigation }) => {
                 </TouchableOpacity>
             )}
            />
-           <TouchableOpacity style={styles.logout}>
+           <TouchableOpacity 
+                style={styles.logout}
+                onPress={() => navigation.navigate("LoginScreen")}
+                >
                <Text style={styles.logoutText}>Logout</Text>
            </TouchableOpacity>
         </View>
@@ -43,12 +46,10 @@ const Home: React.FC<Props> = ({ navigation }) => {
 
 const styles = StyleSheet.create({
     container: {
-        width: "100%",
-        padding: 36,
-        top: -200
+        flex: 1
     },
     header: {
-        width: "100%",
+        
         backgroundColor: "coral",
         padding: 8,
         paddingHorizontal: 15,
@@ -57,10 +58,13 @@ const styles = StyleSheet.create({
     },
     headertext: {
         fontSize: 22,
-        fontWeight: "bold"
+        fontWeight: "bold",
+        textAlign: "center"
     },
     content: {
-        fontSize: 18
+        fontSize: 18,
+        paddingHorizontal: 18,
+        margin: 5
     },
     logout: {
         backgroundColor: "orange",
