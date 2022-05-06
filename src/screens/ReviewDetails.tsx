@@ -4,14 +4,17 @@ import { RootStackParamsList } from '../navigation/HomeStack';
 import { View, Text, StyleSheet } from 'react-native';
 
 
-
 type Props = NativeStackScreenProps<RootStackParamsList>
 
-const ReviewDetails: React.FC<Props> = ({ navigation, route }) => {
+const ReviewDetails: React.FC<Props> = ({ route }) => {
+
+    const { title, review, rating }: any = route.params;
 
     return (
         <View>
-            <Text>Review Details Page</Text>
+            <Text>{title}</Text>
+            <Text>{review}</Text>
+            <Text>{rating}</Text>
         </View>
     );
 };
