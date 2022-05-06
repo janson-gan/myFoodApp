@@ -1,13 +1,18 @@
-import { useNavigation } from '@react-navigation/native';
 import { NativeStackScreenProps } from '@react-navigation/native-stack';
 import React, { useState } from 'react';
 import { View, Text, StyleSheet, FlatList, TouchableOpacity } from 'react-native';
 import { RootStackParamsList } from '../navigation/HomeStack';
-import ReviewDetails from './ReviewDetails';
 
 type Props = NativeStackScreenProps<RootStackParamsList>
 
-const reviews = [
+type items = {
+    key: number,
+    title: string,
+    review: string,
+    rating: number
+}
+
+const reviews: items[] = [
     {key: 1, title: "Hainanese Chicken Rice", review: "Lorel Ipsum", rating: 5},
     {key: 2, title: "Nasi Lemak", review: "Lorel Ipsum", rating: 3},
     {key: 3, title: "Hokkien Mee", review: "Lorel Ipsum", rating: 4},
